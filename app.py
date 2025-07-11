@@ -6,7 +6,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import torch
 
 # CONFIG 
-MODEL_PATH = r'D:\Desktop Files\OpenCv\INTERNSHIP_Aicte_project\plant_classifier_model.keras'
+MODEL_PATH = 'plant_classifier_model.keras'
 INPUT_SIZE = (224, 224)
 CLASS_NAMES = [
     'Aloevera', 'Amla', 'Amruthaballi', 'Arali', 'Astma_weed', 'Badipala', 'Balloon_Vine', 'Bamboo',
@@ -25,7 +25,7 @@ ROLLING_WINDOW = 5
 CONFIDENCE_THRESHOLD = 0.5
 
 # Load FLAN-T5 Model for Ayurvedic Info 
-FLAN_MODEL_PATH = "INTERNSHIP_Aicte_project\Models"  
+FLAN_MODEL_PATH = "Models"  #flan-t5 model path
 print("Loading FLAN-T5 model...")
 tokenizer = AutoTokenizer.from_pretrained(FLAN_MODEL_PATH)
 flan_model = AutoModelForSeq2SeqLM.from_pretrained(FLAN_MODEL_PATH)
